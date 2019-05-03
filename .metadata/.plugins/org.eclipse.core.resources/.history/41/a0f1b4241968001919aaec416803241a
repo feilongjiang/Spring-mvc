@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@ page isELIgnored="true" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="product_save.action" method="post">
+ <fieldset style="algin:center;">
+ <legend>input</legend>
+ <label for="name" >name: </label><input type="text" name = 'name' value="请输入" /> <br />
+ desc: <input type="text" name="description" value="描述" title="例如" /> <br />
+ price: <input type="text" name="price" value="" />
+ <input type="submit"  value= "提交"  />
+
+ </fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<modules>
+  <module moduleId="org.eclipse.jst.j2ee.server:app13a" serverId="apache-tomcat-9.0.17 at localhost (2)"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:app15a" serverId="apache-tomcat-9.0.17 at localhost (2)"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:app16b" serverId="apache-tomcat-9.0.17 at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:jspTest" serverId="apache-tomcat-9.0.17 at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:app16a" serverId="apache-tomcat-9.0.17 at localhost (2)"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:app09" serverId="apache-tomcat-9.0.17 at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:app12a" serverId="apache-tomcat-9.0.17 at localhost (2)"/>
+  <module moduleId="org.eclipse.jst.jee.server:jspTest1" serverId="apache-tomcat-9.0.17 at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:app" serverId="MyTomcatServer"/>
+  <module moduleId="org.eclipse.jst.jee.server:app02a" serverId="apache-tomcat-9.0.17 at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:website" serverId="apache-tomcat-9.0.17 at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:app14a" serverId="apache-tomcat-9.0.17 at localhost (2)"/>
+  <module moduleId="org.eclipse.jst.jee.server:app05a" serverId="apache-tomcat-9.0.17 at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:app04a" serverId="apache-tomcat-9.0.17 at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:app07a" serverId="apache-tomcat-9.0.17 at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:app06a" serverId="apache-tomcat-9.0.17 at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:app08a" serverId="apache-tomcat-9.0.17 at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:app18a" serverId="apache-tomcat-9.0.17 at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:app19a" serverId="apache-tomcat-9.0.17 at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:app01" serverId="apache-tomcat-9.0.17 at localhost"/>
+</modules>

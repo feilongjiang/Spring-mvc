@@ -1,0 +1,9 @@
+package controller;
+
+public class SaveProductController implements Controller{
+	@Override
+	public String handleRequest() {
+		// TODO Auto-generated method stub
+		return "/WEB-INF/jsp/productDela.jsp";
+	}
+}

@@ -1,0 +1,12 @@
+1555814971622	Delete element
+1555814974962	Delete element
+1555820304573	Rename type 'test'
+1555823480813	Move 'springmvc-servlet.xml' to 'webapp'
+1555823759438	Move 'springmvc-servlet.xml' to 'lib'
+1555823813125	Move 'springmvc-servlet.xml' to 'bean'
+1555823817478	Move 'springmvc-servlet.xml' to 'classes'
+1555825652857	Delete element
+1555826650391	Rename compilation unit 'Adress.java'
+1555826662233	Rename compilation unit 'Employed.java'
+1555827938842	Delete element
+1555827954991	Move 'springmvc-servlet.xml' to 'resources'

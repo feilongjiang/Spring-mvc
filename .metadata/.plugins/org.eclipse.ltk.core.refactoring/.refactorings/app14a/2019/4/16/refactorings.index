@@ -1,0 +1,13 @@
+1555723788868	Delete element
+1555727609145	Rename compilation unit 'ServletContainerInitializer.java'
+1555727735586	Move 'initializer.MyServletContainerInitializer' to 'services'
+1555727810643	Delete element
+1555728098776	Move 'initializer' to 'WEB-INF'
+1555728128662	Move 'servlet' to 'WEB-INF'
+1555728207918	Move 'initializer' to 'WebContent'
+1555728210500	Move 'servlet' to 'initializer'
+1555728213300	Move 'servlet' to 'WebContent'
+1555728229702	Move 'initializer' to 'lib'
+1555728232096	Move 'servlet' to 'lib'
+1555728316797	Move 'initializer' to 'classes'
+1555728320051	Move 'servlet' to 'classes'

@@ -1,0 +1,23 @@
+package service;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicLong;
+
+
+import domain.Product;
+public class ProductServiceImpl implements ProductService {
+	private Map<Long,Product> products = new HashMap<Long,Product>();
+	private AutomicLong generator = new AutomicLong(); 
+	@Override
+	public Product add(Product product) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Product get(long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

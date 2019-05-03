@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Order Form</title>
+</head>
+<body>
+	<h1>Order Form</h1>
+	<form method='post'>
+	<table>
+		<tr>
+			<td>Name:</td><td><input  name='name' /></td>
+		</tr>
+		<tr>
+			<td>Address:</td>
+			<!--文本区域  会将文字发送给服务器,如若没有任何内容,则会发送空字符""给服务器 -->
+			<td><textarea name="address" id="" cols="40" rows="5"></textarea></td>
+		</tr>
+		<tr>
+			<td>Country:</td>
+			<!--  下拉框select 如果被选择,会将option选项的文字发送给服务器,不会向服务器返回任何值,  getParameter()为null -->
+			<td><select name='country'>
+			<option>Canada</option>
+			<option>United States</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td>Delivery Method:</td>
+			<!--  radio 如果没有选择,不会向服务器返回任何值,  getParameter()为null-->
+			<td><input type="radio" name="delivery" id="" value="First Class" />First Class
+			<input type="radio" name="delivery" value="Second" />Second Class
+			</td>
+		</tr>
+		<tr>
+			<td>Shipping Instructions:</td>
+			<!--  多个区域不输入内容,默认发送个<br> -->
+			<td><textarea name="instruction" id="" cols="40" rows="5"></textarea></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td><textarea name="instruction" id="" cols="40" rows="5"></textarea></td>
+		</tr>
+		<tr>
+			<td>P	lease send me the latest product catalog:</td>
+			<!--  单选框checkbox 将被选中按钮的值发送到服务器,如果没有选择任何按钮,将没有任何内容被发送到服务器
+			  getParameter()为null-->
+			<td><input type="checkbox" name="catalog" /></td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td><input type="reset" /> <input type="submit" /></td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>

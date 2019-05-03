@@ -1,0 +1,9 @@
+package controler;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public interface Controler {
+	String HandleRequest(HttpServletRequest request,HttpServletResponse response) ;
+
+}

@@ -1,0 +1,10 @@
+package service;
+
+public class BookService implements Service{
+
+	public void hand() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

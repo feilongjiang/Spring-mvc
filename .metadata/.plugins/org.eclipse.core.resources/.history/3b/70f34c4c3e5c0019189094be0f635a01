@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%> 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Employee</title>
+</head>
+<body>
+accept-language: ${header['accept-language']}
+<br />
+session id: ${pageContext.session.id }
+<br />
+employee: ${requestScope.employee.name}, ${employee.address.city}
+<br />
+capital: ${capitals["Canada"]}
+</body>
+</html>

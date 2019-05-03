@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee   
+  http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+  <display-name>app04a</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>AsyncComplete</servlet-name>
+  	<servlet-class>servlet.AsyncCompleteServlet</servlet-class>
+  	<async-supported>true</async-supported>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AsyncComplete</servlet-name>
+  	<url-pattern>/async-supported</url-pattern>
+  </servlet-mapping>
+
+  <!-- restricts access to JSP pages -->
+<security-constraint>
+<web-resource-collection>
+<web-resource-name>JSP pages</web-resource-name>
+<url-pattern>*.jsp</url-pattern>
+</web-resource-collection>
+<!-- must have auth-constraint, otherwise the
+specified web resources will not be restricted -->
+<auth-constraint/>
+</security-constraint>
+  
+  <jsp-config>
+    <taglib>
+    <taglib-uri>http://java.sun.com/jsp/jstl/functions</taglib-uri>
+    <taglib-location>/WEB-INF/lib/fn.tld</taglib-location>
+    </taglib>
+    
+    <taglib>
+    <taglib-uri>http://java.sun.com/jsp/jstl/fmt</taglib-uri>
+    <taglib-location>/WEB-INF/lib/fmt.tld</taglib-location>
+    </taglib>
+    <taglib>
+    <taglib-uri>http://java.sun.com/jsp/jstl/fmt-rt</taglib-uri>
+    <taglib-location>/WEB-INF/lib/fmt-rt.tld</taglib-location>
+    </taglib>
+    <taglib>
+    <taglib-uri>http://java.sun.com/jsp/jstl/core</taglib-uri>
+    <taglib-location>/WEB-INF/lib/c.tld</taglib-location>
+    </taglib>
+    <taglib>
+    <taglib-uri>http://java.sun.com/jsp/jstl/core-rt</taglib-uri>
+    <taglib-location>/WEB-INF/lib/c-rt.tld</taglib-location>
+    </taglib>
+    <taglib>
+    <taglib-uri>http://java.sun.com/jsp/jstl/sql</taglib-uri>
+    <taglib-location>/WEB-INF/lib/sql.tld</taglib-location>
+    </taglib>
+    <taglib>
+    <taglib-uri>http://java.sun.com/jsp/jstl/sql-rt</taglib-uri>
+    <taglib-location>/WEB-INF/lib/sql-rt.tld</taglib-location>
+    </taglib>
+    <taglib>
+    <taglib-uri>http://java.sun.com/jsp/jstl/x</taglib-uri>
+    <taglib-location>/WEB-INF/lib/x.tld</taglib-location>
+    </taglib>
+    <taglib>
+    <taglib-uri>http://java.sun.com/jsp/jstl/x-rt</taglib-uri>
+    <taglib-location>/WEB-INF/lib/x-rt.tld</taglib-location>
+    </taglib>
+    </jsp-config>
+  
+  
+</web-app>

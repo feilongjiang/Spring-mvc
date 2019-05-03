@@ -1,0 +1,59 @@
+package app;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.Servlet;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebServlet;
+
+/*WebServlet 用来声明一个Servlet,命名servlet时,还可以暗示容器,
+ * usrlPatterns 告诉容器,/my样式表示应该调用Servlet
+ */
+@WebServlet( name = "Myservlet", urlPatterns = {"/my"})
+public class MyServlet implements Servlet 
+{
+	//transient变量不能被序列化
+	private transient  ServletConfig servletConfig;
+
+	//init方法只会调用一次,并接受servletConfig
+	@Override
+	public void init(ServletConfig servletConfig) throws ServletException{
+		this.servletConfig = servletConfig;
+	}
+	@Override 
+	public ServletConfig getServletConfig(){
+		return servletConfig;
+	}
+	@Override
+	public String getServletInfo(){
+		return "My Servlet";
+	}
+	
+	/*Service 发送字符串"hello from MyServlet"给浏览器 
+	*对于每个http请求,Servlet容器都会创建一个ServletRequest实例,并将它传给Servlet的Service方法
+	*
+	*/
+	@Override
+	public void service(ServletRequest request,ServletResponse response)
+							throws ServletException,IOException{
+		String servletName = servletConfig.getServletName();
+		response.setContentType("text/html");
+		PrintWriter writer = response.getWriter();
+		String id = request.getParameter("id");
+		writer.print("<html><head></head>"
+				+ "<body>Hello from " + servletName + " id = " + id
+				+ "</body></html>");
+	}
+
+	@Override
+	public void destroy(){
+		
+	}
+	public static void main(String[] args){
+		
+	}
+	
+}

@@ -1,0 +1,17 @@
+1556442062400	Delete element
+1556442298585	Rename resource 'app18a-config.xml'
+1556442532959	Rename resource 'main'
+1556442815217	Move 'app18b-config.xml' to 'WEB-INF'
+1556443082311	Delete element
+1556444794180	Rename resource 'app18b-config.xml'
+1556446852531	Move 'springmvc-config.xml' to 'config'
+1556451366257	Delete element
+1556453340414	Move 'css' to 'WEB-INF'
+1556453614378	Move 'css' to 'webapp'
+1556455482405	Delete element
+1556455491483	Rename resource 'mian.css'
+1556458868492	Move 'css' to 'resources'
+1556460987595	Delete element
+1556461001405	Rename resource 'bootstrap.css'
+1556504786138	Move 'css' to 'webapp'
+1556515752424	Rename resource 'index.jsp'

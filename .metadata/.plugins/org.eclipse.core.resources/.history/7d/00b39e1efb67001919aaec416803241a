@@ -1,0 +1,32 @@
+package controler;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import domain.Product;
+import form.ProductForm;
+
+public class SaveProductController implements Controler{
+
+	@Override
+	public String handleRequest(HttpServletRequest request, HttpServletResponse response) {
+		ProductForm productForm = new ProductForm();
+		productForm.setName(request.getParameter("name"));
+		productForm.setDescription(request.getParameter("Description"));
+		productForm.setPrice(request.getParameter("price"));
+		
+		//create model
+		Product product = new Product();
+		product.setName(productForm.getName());
+		try {
+			product.setPrice(Float.parseFloat(productForm.getPrice()));
+		}catch(NumberFormatException e) {
+		}
+		
+		// insert code product to database
+		
+		request.setAttribute("product", product);
+		return "/WEB-INF/jsp/ProductDetails.jsp";
+	}
+
+}

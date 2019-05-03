@@ -1,0 +1,38 @@
+package app;
+
+import java.io.*;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Enumeration;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet(name = "FormServlet", urlPatterns ="/form")
+public class FormServlet  extends HttpServlet{
+
+	private static final long serialVersionUID = 1L;
+	
+	@Override 
+	public void doGet (HttpServletRequest request,HttpServletResponse response) throws IOException {
+		response.setContentType("text/html");
+		PrintWriter writer = response.getWriter();
+		StringBuilder sb = new StringBuilder();
+		try(BufferedReader in = new BufferedReader(new FileReader(new File("form.html").getAbsoluteFile()))){
+			try{
+				String s = null;
+				while((s = in.readLine())!= null) {
+					sb.append(s + "\n");
+				}
+				}finally {
+					in.close();
+			}
+		}catch(IOException e) {
+			throw new RuntimeException(e);
+		}
+		writer.print(sb);
+	}
+	
+}

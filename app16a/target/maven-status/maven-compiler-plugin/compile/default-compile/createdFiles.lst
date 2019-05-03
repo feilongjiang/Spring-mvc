@@ -1,0 +1,3 @@
+form\ProductForm.class
+servlet\ControllerServlet.class
+domain\Product.class

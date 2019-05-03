@@ -1,0 +1,9 @@
+package controller;
+
+public class InputProductController2 implements Controller{
+	@Override
+	public String handleRequest() {
+		// TODO Auto-generated method stub
+		return "/WEB-INF/jsp/productForm.jsp";
+	}
+}

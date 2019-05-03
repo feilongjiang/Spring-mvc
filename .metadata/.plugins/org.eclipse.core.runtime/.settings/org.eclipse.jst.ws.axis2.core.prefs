@@ -1,0 +1,4 @@
+axis2RuntimeLocation=C\:\\Program Files\\tomcat\\apache-tomcat-9.0.17
+cleintDatabinding=ADB
+eclipse.preferences.version=1
+serviceDatabinding=ADB

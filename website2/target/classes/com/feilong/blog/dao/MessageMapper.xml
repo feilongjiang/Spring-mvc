@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.feilong.blog.dao.MessageDao">
+
+    <insert id="insert" parameterType="com.feilong.blog.dao.Message">
+        INSERT message (author, content, date)
+        VALUES (#{author}, #{content}, #{date})
+    </insert>
+
+    <select id="getAll" resultType="com.feilong.blog.dao.Message">
+        SELECT * FROM message ORDER BY id DESC
+    </select>
+
+</mapper>

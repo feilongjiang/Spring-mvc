@@ -1,0 +1,59 @@
+	package app;
+	
+	import java.io.IOException;
+	import java.io.PrintWriter;
+	import javax.servlet.Servlet;
+	import javax.servlet.ServletConfig;
+	import javax.servlet.ServletException;
+	import javax.servlet.ServletRequest;
+	import javax.servlet.ServletResponse;
+	import javax.servlet.annotation.WebServlet;
+	
+	/*WebServlet 用来声明一个Servlet,命名servlet时,还可以暗示容器,
+	 * usrlPatterns 告诉容器,/my样式表示应该调用Servlet
+	 */
+	@WebServlet( name = "Myservlet", urlPatterns = {"/my"})
+	public class MyServlet implements Servlet 
+	{
+		//transient变量不能被序列化
+		private transient  ServletConfig servletConfig;
+	
+		//init方法只会调用一次,并接受servletConfig
+		@Override
+		public void init(ServletConfig servletConfig) throws ServletException{
+			this.servletConfig = servletConfig;
+		}
+		@Override 
+		public ServletConfig getServletConfig(){
+			return servletConfig;
+		}
+		@Override
+		public String getServletInfo(){
+			return "My Servlet";
+		}
+		
+		/*Service 发送字符串"hello from MyServlet"给浏览器 
+		*对于每个http请求,Servlet容器都会创建一个ServletRequest实例,并将它传给Servlet的Service方法
+		*
+		*/
+		@Override
+		public void service(ServletRequest request,ServletResponse response)
+								throws ServletException,IOException{
+			String servletName = servletConfig.getServletName();
+			response.setContentType("text/html"); //在发送任何HTML标签前,应该先调用setContentType()方法,设置响应的内容类型
+			PrintWriter writer = response.getWriter();  //返回一个可以向客户端发送文本的printWriter
+			String v = request.getParameter("v");//返回指定请求参数的值
+			writer.print("<html><head></head>"
+					+ "<body>Hello from " + servletName + " v = " + v
+					+ "</body></html>"); //发送数据
+		}
+	
+		@Override
+		public void destroy(){
+			
+		}
+		public static void main(String[] args){
+			
+		}
+		
+	}

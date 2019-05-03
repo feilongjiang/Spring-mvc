@@ -1,0 +1,50 @@
+package controler;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import domain.Product;
+import form.ProductForm;
+import validator.ProductValidator;
+
+public class SaveProductController implements Controler {
+
+	@Override
+	public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		ProductForm productForm = new ProductForm();
+		request.setCharacterEncoding("utf-8");
+		productForm.setName(request.getParameter("name"));
+		productForm.setDescription(request.getParameter("description"));
+		productForm.setPrice(request.getParameter("price"));
+
+		ProductValidator productValidator = new ProductValidator();
+		if (productValidator.validate(productForm).isEmpty()) 
+		{
+			// create model
+			Product product = new Product();
+			if (productValidator.validate(productForm) == null) {
+				product.setName(productForm.getName());
+				product.setDescription(productForm.getDescription());
+				try {
+					product.setPrice(Float.parseFloat(productForm.getPrice()));
+				} catch (NumberFormatException e) {
+				}
+
+				request.setAttribute("product", product);
+			} else {
+				List<String> errors = productValidator.validate(productForm);
+				request.setAttribute("errors", errors);
+			}
+		}
+			// insert code product to database
+
+			return "/WEB-INF/jsp/ProductDetails.jsp";
+		
+	}
+
+}

@@ -1,0 +1,4 @@
+1554728064451	Move 'welcome.jsp' to 'WEB-INF'
+1554728086323	Move 'welcome.jsp' to 'WebContent'
+1554728088810	Move 'web.xml' to 'WebContent'
+1554728133042	Move 'web.xml' to 'WEB-INF'
